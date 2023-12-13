@@ -18,7 +18,7 @@ graph TD;
     A-B-->A-B-C;
     A-->A-G;
     A-G-->A-G-H;
-    A-G-->A-G-I
+    A-G-->A-G-I;
 ```
 In the above example: a member of role A-G will have access to folders A-G-H & A-G-J
 
