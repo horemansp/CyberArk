@@ -7,5 +7,5 @@ Pre-requisites:
 When prompted for a ticket ID the following can be entered in the ticketID field: (in this example, but can be changed to anything...)
 - mobile (will trigger a push to mobile app for approval)
 - email (will send an email with clickable link for approval)
-- breakglass (will not enforce any approval and grant access immediately)
+- breakglass (will not enforce any approval and grant access immediately but sends warning emails)
 
