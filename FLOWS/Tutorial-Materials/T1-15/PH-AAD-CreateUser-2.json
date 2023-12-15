@@ -1,0 +1,1061 @@
+{
+  "aapilets": {
+    "scim": {
+      "enabled": false,
+      "version": 2
+    },
+    "name": "PH-AAD-CreateUser-2",
+    "title": "",
+    "start-connection": "form-definition-1113342706",
+    "apiconnection": {
+      "api-webhook-desc": {
+        "displayName": {
+          "description": "displayName",
+          "location": "query",
+          "position": 0,
+          "type": "Text",
+          "validation": ""
+        },
+        "mailNickname": {
+          "description": "mailNickname",
+          "location": "query",
+          "position": 1,
+          "type": "Text",
+          "validation": ""
+        },
+        "requestorEmail": {
+          "description": "requestorEmail",
+          "location": "query",
+          "position": 2,
+          "type": "Text",
+          "validation": ""
+        }
+      },
+      "api-custom-values": {
+        "approverEmail": {
+          "formula": false,
+          "prompt": false,
+          "saved": false,
+          "value": "APROVER@DOMAIN.COM"
+        },
+        "tempPassword": {
+          "formula": false,
+          "prompt": false,
+          "saved": false,
+          "value": "ChangeASAP@123"
+        }
+      },
+      "manualProcess": false,
+      "mask-parameters": {
+        "aapi-custom-values": [],
+        "aapilet-external-request": [],
+        "form-definition-1112712404": [],
+        "form-definition-1113342706": [],
+        "form-definition-1119100755": []
+      },
+      "run": {
+        "browser": {
+          "enabled": true,
+          "oidcEnabled": false,
+          "oidcid": "96e7e51e-30a7-47c3-bc70-dc0fab80d3cb",
+          "workspaceEnabled": true
+        },
+        "endpoint": {
+          "active": false,
+          "apikey": ""
+        },
+        "manual": {
+          "active": true,
+          "postrun": {
+            "api-condition-stop-definition-1113829476": {
+              "close": true,
+              "customredirect": {
+                "enabled": false,
+                "isredirected": false,
+                "redirecturl": []
+              },
+              "remain": false
+            },
+            "api-condition-stop-definition-1117384428": {
+              "close": true,
+              "customredirect": {
+                "enabled": false,
+                "isredirected": false,
+                "redirecturl": []
+              },
+              "remain": false
+            },
+            "close": false,
+            "customredirect": {
+              "enabled": false,
+              "isredirected": false,
+              "redirecturl": []
+            },
+            "redirect": false,
+            "redirecturl": "",
+            "remain": true,
+            "workspace": false
+          }
+        },
+        "schedule": {
+          "active": false,
+          "day": [],
+          "options": "periodically",
+          "periodically": "10m",
+          "range": [],
+          "time": []
+        }
+      },
+      "timer": {
+        "interval-days": "",
+        "interval-endtime": "",
+        "interval-hours": "",
+        "interval-specificdate": "",
+        "interval-starttime": "",
+        "interval-timezone": "",
+        "interval-type": "minutes",
+        "interval-value": "10"
+      },
+      "form-definition-1113342706": {
+        "appname": "appname-1113342706",
+        "basePath": null,
+        "definition-id": "1113342706",
+        "description": "",
+        "form-map-template": {
+          "components": [
+            {
+              "input": true,
+              "key": "userToCreate",
+              "label": "User to create",
+              "tableView": true,
+              "type": "textfield"
+            },
+            {
+              "disableOnInvalid": true,
+              "input": true,
+              "key": "submit",
+              "label": "Save",
+              "saveOnEnter": false,
+              "showValidations": false,
+              "tableView": false,
+              "type": "button"
+            },
+            {
+              "input": true,
+              "key": "denyReason",
+              "label": "Deny reason",
+              "tableView": true,
+              "type": "textfield"
+            },
+            {
+              "input": true,
+              "key": "deny",
+              "label": "Deny",
+              "saveOnEnter": false,
+              "showValidations": false,
+              "tableView": false,
+              "type": "button"
+            }
+          ]
+        },
+        "form-map-values": {
+          "deny": [],
+          "denyReason": [],
+          "submit": [],
+          "submit1": [],
+          "textField": [],
+          "userToCreate": [
+            {
+              "_id": "MID6746352104281033",
+              "ref": "text",
+              "value": ""
+            },
+            {
+              "_id": "MID7940850182087071",
+              "description": "displayName",
+              "location": "query",
+              "maskParameter": false,
+              "name": "displayName",
+              "ref": "aapilet-external-request",
+              "value": "displayName"
+            },
+            {
+              "_id": "MID3770325856312997",
+              "ref": "text",
+              "value": ""
+            }
+          ]
+        },
+        "formheader": "Create User",
+        "formid": "",
+        "formname": "form-1113342706",
+        "formuniqueid": "form-definition-1113342706",
+        "goto": "api-condition-bool-definition-1115377714",
+        "guid": "form-definition-1113342706",
+        "id": "form-definition-1113342706",
+        "isEditForm": true,
+        "isTemplate": false,
+        "ismyform": false,
+        "logo": "",
+        "nodeType": "Form",
+        "objData": {
+          "item": {
+            "data": {
+              "basePath": "/",
+              "consumes": [],
+              "host": "virtserver.swaggerhub.com",
+              "info": {
+                "description": "",
+                "title": "api-title-16381948",
+                "version": "1.0.0"
+              },
+              "paths": {
+                "/example": {
+                  "get": {
+                    "description": "This is an example opeartion to show how security is applied to the call.",
+                    "responses": {
+                      "200": {
+                        "description": "OK"
+                      }
+                    },
+                    "summary": "Server example operation"
+                  }
+                }
+              },
+              "produces": [],
+              "schemes": [
+                "https"
+              ],
+              "security": [],
+              "swagger": "2.0",
+              "x-applicationinfo": {
+                "x-API-Description": "API Description",
+                "x-API-Documentation-URL": "API Documentation URL",
+                "x-API-Name": "apiname",
+                "x-App-Description": "Description of Application",
+                "x-App-Logo": "Logo of Application",
+                "x-App-Name": "appname",
+                "x-App-URL": "Home page of application controlling this API",
+                "x-Category": "API Category",
+                "x-Company": "company",
+                "x-Company-Github": "Company Git URL",
+                "x-additionalHostNames": "Name of additional controlling this API"
+              }
+            }
+          }
+        },
+        "title": null,
+        "type": "form"
+      },
+      "api-condition-bool-definition-1115377714": {
+        "branchName": "Branch-1115377714",
+        "condition": "contains",
+        "condition-id": "1115377714",
+        "condition-in": {
+          "_id": "MID7134686422069854",
+          "image": "/pages-gateway/assets/images/formula-white-search.svg",
+          "isFormula": false,
+          "maskParameter": false,
+          "params": [
+            {
+              "params": [
+                {
+                  "ref": "expression",
+                  "type": "string",
+                  "value": "value string"
+                },
+                {
+                  "params": [
+                    {
+                      "ref": "expression",
+                      "type": "string",
+                      "value": "form-definition-1113342706"
+                    },
+                    {
+                      "ref": "expression",
+                      "type": "string",
+                      "value": "deny"
+                    }
+                  ],
+                  "ref": "expression",
+                  "source": "String(Concat(`value string`,MapValue(`form-definition-1113342706`,`deny`)))",
+                  "type": "function",
+                  "value": "MapValue"
+                }
+              ],
+              "ref": "expression",
+              "source": "String(Concat(`value string`,MapValue(`form-definition-1113342706`,`deny`)))",
+              "type": "function",
+              "value": "Concat"
+            }
+          ],
+          "ref": "expression",
+          "source": "String(Concat(`value string`,MapValue(`form-definition-1113342706`,`deny`)))",
+          "type": "function",
+          "value": "String"
+        },
+        "condition-true-path": "rightpath",
+        "condition-type": "bool",
+        "guid": "api-condition-bool-definition-1115377714",
+        "id": "api-condition-bool-definition-1115377714",
+        "map": [
+          {
+            "goto": "api-definition-1117200093",
+            "options": false
+          },
+          {
+            "goto": "email-definition-1111549723",
+            "options": true
+          }
+        ],
+        "nodeType": "Branch",
+        "value": {
+          "_id": "MID0818058258946639",
+          "ref": "text",
+          "value": "true"
+        }
+      },
+      "api-definition-1117200093": {
+        "api-authentication": {
+          "auth-all-scopes": null,
+          "auth-apikey-location": "",
+          "auth-apikey-name": "",
+          "auth-apikey-value": "*******",
+          "auth-clientid": "*******",
+          "auth-clientsecret": "*******",
+          "auth-content-type": "application/x-www-form-urlencoded",
+          "auth-flow": "application",
+          "auth-password": "",
+          "auth-refresh-token": "",
+          "auth-scopes": [],
+          "auth-token": "",
+          "auth-token-url": "https://login.microsoftonline.com/a7f756d7-db80-4ae1-b833-c62d51748d05/oauth2/v2.0/token",
+          "auth-type": "oauth2",
+          "auth-url": "",
+          "auth-userid": "",
+          "smtp-server-port": 0,
+          "smtp-server-url": ""
+        },
+        "api-call-body": [
+          {
+            "ref": "text",
+            "value": "{"
+          },
+          {
+            "ref": "text",
+            "value": "\"accountEnabled\":"
+          },
+          {
+            "ref": "text",
+            "value": "true"
+          },
+          {
+            "ref": "text",
+            "value": ","
+          },
+          {
+            "ref": "text",
+            "value": "\"displayName\":"
+          },
+          {
+            "ref": "text",
+            "value": "\""
+          },
+          {
+            "ref": "text",
+            "value": ""
+          },
+          {
+            "_id": "MID892685442481902",
+            "description": "displayName",
+            "location": "query",
+            "maskParameter": false,
+            "name": "displayName",
+            "ref": "aapilet-external-request",
+            "value": "displayName"
+          },
+          {
+            "ref": "text",
+            "value": ""
+          },
+          {
+            "ref": "text",
+            "value": "\""
+          },
+          {
+            "ref": "text",
+            "value": ","
+          },
+          {
+            "ref": "text",
+            "value": "\"mailNickname\":"
+          },
+          {
+            "ref": "text",
+            "value": "\""
+          },
+          {
+            "ref": "text",
+            "value": ""
+          },
+          {
+            "_id": "MID9725061181062709",
+            "description": "mailNickname",
+            "location": "query",
+            "maskParameter": false,
+            "name": "mailNickname",
+            "ref": "aapilet-external-request",
+            "value": "mailNickname"
+          },
+          {
+            "ref": "text",
+            "value": ""
+          },
+          {
+            "ref": "text",
+            "value": "\""
+          },
+          {
+            "ref": "text",
+            "value": ","
+          },
+          {
+            "ref": "text",
+            "value": "\"passwordPolicies\":"
+          },
+          {
+            "ref": "text",
+            "value": "\""
+          },
+          {
+            "ref": "text",
+            "value": "DisablePasswordExpiration"
+          },
+          {
+            "ref": "text",
+            "value": "\""
+          },
+          {
+            "ref": "text",
+            "value": ","
+          },
+          {
+            "ref": "text",
+            "value": "\"passwordProfile\":"
+          },
+          {
+            "ref": "text",
+            "value": "{"
+          },
+          {
+            "ref": "text",
+            "value": "\"password\":"
+          },
+          {
+            "ref": "text",
+            "value": "\""
+          },
+          {
+            "ref": "text",
+            "value": ""
+          },
+          {
+            "_id": "MID4475784619259997",
+            "maskParameter": false,
+            "name": "tempPassword",
+            "position": 0,
+            "ref": "aapi-custom-values",
+            "value": "tempPassword"
+          },
+          {
+            "ref": "text",
+            "value": ""
+          },
+          {
+            "ref": "text",
+            "value": "\""
+          },
+          {
+            "ref": "text",
+            "value": ","
+          },
+          {
+            "ref": "text",
+            "value": "\"forceChangePasswordNextSignIn\":"
+          },
+          {
+            "ref": "text",
+            "value": "true"
+          },
+          {
+            "ref": "text",
+            "value": "}"
+          },
+          {
+            "ref": "text",
+            "value": ","
+          },
+          {
+            "ref": "text",
+            "value": "\"userPrincipalName\":"
+          },
+          {
+            "ref": "text",
+            "value": "\""
+          },
+          {
+            "ref": "text",
+            "value": ""
+          },
+          {
+            "_id": "MID2218377489561274",
+            "description": "mailNickname",
+            "list": [
+              ""
+            ],
+            "location": "query",
+            "logo": "/pages-gateway/assets/images/webhook.svg",
+            "maskParameter": false,
+            "name": "mailNickname",
+            "ref": "aapilet-external-request",
+            "value": "mailNickname"
+          },
+          {
+            "ref": "text",
+            "value": "@phconsul.onmicrosoft.com"
+          },
+          {
+            "ref": "text",
+            "value": "\""
+          },
+          {
+            "ref": "text",
+            "value": "}"
+          }
+        ],
+        "api-call-contenttype": "application/json",
+        "api-call-form": {},
+        "api-call-header": {},
+        "api-call-path": {},
+        "api-call-query": {},
+        "api-call-type": "post",
+        "api-map-config": {
+          "api-call-body": {
+            "description": "",
+            "location": "body",
+            "name": "body",
+            "type": "object",
+            "webhookInput": null,
+            "webhookValidation": null,
+            "required": false,
+            "prompt": false,
+            "defaultParameter": false
+          },
+          "api-call-form": {},
+          "api-call-header": {},
+          "api-call-path": {},
+          "api-call-query": {}
+        },
+        "api-map-desc": {
+          "api-call-body": "",
+          "api-call-form": {},
+          "api-call-header": {},
+          "api-call-path": {},
+          "api-call-query": {}
+        },
+        "apiid": "78a33b4c-132e-4c50-a3f8-3bd0511f8c16",
+        "apiname": "api-1117200093",
+        "apiuniqueid": "",
+        "appname": "appname-1117200093",
+        "authRequired": false,
+        "basePath": "/",
+        "builder-auth-id": "6d90df40-88a9-4e53-839d-2314ebed0266",
+        "company": "AAF4862",
+        "definition-id": "1117200093",
+        "endpoint": "/v1.0/users",
+        "global_apiid": "",
+        "global_region": "",
+        "goto": "email-definition-1111883499",
+        "host": "graph.microsoft.com",
+        "id": "api-definition-1117200093",
+        "logo": "",
+        "nodeType": "API",
+        "scheme": [
+          "https"
+        ],
+        "version": "1.0.0"
+      },
+      "email-definition-1111883499": {
+        "api-authentication": {
+          "auth-apikey-location": "",
+          "auth-apikey-name": "",
+          "auth-apikey-value": "",
+          "auth-clientid": "",
+          "auth-clientsecret": "",
+          "auth-content-type": "",
+          "auth-flow": "",
+          "auth-password": "",
+          "auth-refresh-token": "",
+          "auth-scopes": [],
+          "auth-token": "",
+          "auth-token-type": "",
+          "auth-token-url": "",
+          "auth-type": "",
+          "auth-url": "",
+          "auth-userid": "",
+          "smtp-server-url": ""
+        },
+        "definition-id": "1111883499",
+        "email-map-values": {
+          "bcc": [],
+          "cc": [
+            {
+              "_id": "MID801273038940955",
+              "ref": "text",
+              "value": ""
+            },
+            {
+              "_id": "MID5927588964432915",
+              "maskParameter": false,
+              "name": "approverEmail",
+              "position": 1,
+              "ref": "aapi-custom-values",
+              "value": "approverEmail"
+            },
+            {
+              "_id": "MID14495824187477657",
+              "ref": "text",
+              "value": ""
+            }
+          ],
+          "from": [],
+          "htmlcontent": [],
+          "plaincontent": [
+            {
+              "_id": "MID17519012626398012",
+              "ref": "text",
+              "value": "The request to create user "
+            },
+            {
+              "_id": "MID23061100250315847",
+              "description": "displayName",
+              "list": [
+                ""
+              ],
+              "location": "query",
+              "logo": "/pages-gateway/assets/images/webhook.svg",
+              "maskParameter": false,
+              "name": "displayName",
+              "ref": "aapilet-external-request",
+              "value": "displayName"
+            },
+            {
+              "_id": "MID639589344915247",
+              "ref": "text",
+              "value": " is approved. User is created."
+            }
+          ],
+          "subject": [
+            {
+              "_id": "MID24999589458101945",
+              "ref": "text",
+              "value": "Request status: User Creation"
+            }
+          ],
+          "to": [
+            {
+              "_id": "MID503325291982289",
+              "ref": "text",
+              "value": ""
+            },
+            {
+              "_id": "MID23825859563149954",
+              "description": "requestorEmail",
+              "list": [
+                ""
+              ],
+              "location": "query",
+              "logo": "/pages-gateway/assets/images/webhook.svg",
+              "maskParameter": false,
+              "name": "requestorEmail",
+              "ref": "aapilet-external-request",
+              "value": "requestorEmail"
+            },
+            {
+              "_id": "MID7067755263981816",
+              "ref": "text",
+              "value": ""
+            }
+          ]
+        },
+        "emailName": "email-1111883499",
+        "goto": "form-definition-1118482753",
+        "id": "email-definition-1111883499",
+        "isEmail": true,
+        "nodeType": "Email",
+        "schema": {},
+        "type": "email"
+      },
+      "form-definition-1118482753": {
+        "appname": "appname-1118482753",
+        "basePath": null,
+        "definition-id": "1118482753",
+        "description": "",
+        "form-map-template": {
+          "components": [
+            {
+              "attrs": [
+                {
+                  "attr": "",
+                  "value": ""
+                }
+              ],
+              "content": "The user is created. A notification email is send tot he requester.",
+              "input": false,
+              "key": "html",
+              "label": "HTML",
+              "refreshOnChange": false,
+              "tableView": false,
+              "type": "htmlelement"
+            },
+            {
+              "disableOnInvalid": true,
+              "input": true,
+              "key": "submit",
+              "label": "Close",
+              "saveOnEnter": false,
+              "showValidations": false,
+              "tableView": false,
+              "type": "button"
+            }
+          ]
+        },
+        "form-map-values": {
+          "html": [],
+          "submit": []
+        },
+        "formheader": "Notification user create",
+        "formid": "",
+        "formname": "form-1118482753",
+        "formuniqueid": "form-definition-1118482753",
+        "goto": "api-condition-stop-definition-1117384428",
+        "id": "form-definition-1118482753",
+        "isEditForm": true,
+        "isTemplate": false,
+        "ismyform": false,
+        "logo": "",
+        "nodeType": "Form",
+        "objData": {
+          "item": {
+            "data": {
+              "basePath": "/",
+              "consumes": [],
+              "host": "virtserver.swaggerhub.com",
+              "info": {
+                "description": "",
+                "title": "api-title-16381948",
+                "version": "1.0.0"
+              },
+              "paths": {
+                "/example": {
+                  "get": {
+                    "description": "This is an example opeartion to show how security is applied to the call.",
+                    "responses": {
+                      "200": {
+                        "description": "OK"
+                      }
+                    },
+                    "summary": "Server example operation"
+                  }
+                }
+              },
+              "produces": [],
+              "schemes": [
+                "https"
+              ],
+              "security": [],
+              "swagger": "2.0",
+              "x-applicationinfo": {
+                "x-API-Description": "API Description",
+                "x-API-Documentation-URL": "API Documentation URL",
+                "x-API-Name": "apiname",
+                "x-App-Description": "Description of Application",
+                "x-App-Logo": "Logo of Application",
+                "x-App-Name": "appname",
+                "x-App-URL": "Home page of application controlling this API",
+                "x-Category": "API Category",
+                "x-Company": "company",
+                "x-Company-Github": "Company Git URL",
+                "x-additionalHostNames": "Name of additional controlling this API"
+              }
+            }
+          }
+        },
+        "title": null,
+        "type": "form"
+      },
+      "api-condition-stop-definition-1117384428": {
+        "condition-id": "1117384428",
+        "condition-type": "Stop",
+        "customresponse": false,
+        "id": "api-condition-stop-definition-1117384428",
+        "killconnection": true,
+        "nodeType": "Stop",
+        "responseformat": {
+          "content-type": "application/json",
+          "response-body": [],
+          "response-config": {
+            "response-header": {},
+            "response-body": {}
+          },
+          "response-header": {}
+        },
+        "usecustomresponse": false
+      },
+      "email-definition-1111549723": {
+        "api-authentication": {
+          "auth-apikey-location": "",
+          "auth-apikey-name": "",
+          "auth-apikey-value": "",
+          "auth-clientid": "",
+          "auth-clientsecret": "",
+          "auth-content-type": "",
+          "auth-flow": "",
+          "auth-password": "",
+          "auth-refresh-token": "",
+          "auth-scopes": [],
+          "auth-token": "",
+          "auth-token-type": "",
+          "auth-token-url": "",
+          "auth-type": "",
+          "auth-url": "",
+          "auth-userid": "",
+          "smtp-server-url": ""
+        },
+        "definition-id": "1111549723",
+        "email-map-values": {
+          "bcc": [],
+          "cc": [
+            {
+              "_id": "MID5798789561825735",
+              "ref": "text",
+              "value": ""
+            },
+            {
+              "_id": "MID5789213240411795",
+              "maskParameter": false,
+              "name": "approverEmail",
+              "ref": "aapi-custom-values",
+              "value": "approverEmail"
+            },
+            {
+              "_id": "MID36766440145559653",
+              "ref": "text",
+              "value": ""
+            }
+          ],
+          "from": [],
+          "htmlcontent": [],
+          "plaincontent": [
+            {
+              "_id": "MID5803314199312002",
+              "ref": "text",
+              "value": "We are sorry, the request to create user  "
+            },
+            {
+              "_id": "MID607087444899165",
+              "description": "displayName",
+              "list": [
+                ""
+              ],
+              "location": "query",
+              "logo": "/pages-gateway/assets/images/webhook.svg",
+              "maskParameter": false,
+              "name": "displayName",
+              "ref": "aapilet-external-request",
+              "value": "displayName"
+            },
+            {
+              "_id": "MID28793768548427034",
+              "ref": "text",
+              "value": " is denied. reason: "
+            },
+            {
+              "_id": "MID517295100191759",
+              "description": "form-1113342706",
+              "list": [
+                ""
+              ],
+              "logo": "/pages-gateway/assets/images/form.png",
+              "maskParameter": false,
+              "name": "Deny reason",
+              "ref": "form-definition-1113342706",
+              "value": "denyReason"
+            },
+            {
+              "_id": "MID38879428519856285",
+              "ref": "text",
+              "value": ""
+            }
+          ],
+          "subject": [
+            {
+              "_id": "MID20088416329454417",
+              "ref": "text",
+              "value": "Request status: User Creation"
+            }
+          ],
+          "to": [
+            {
+              "_id": "MID4020037173978175",
+              "ref": "text",
+              "value": ""
+            },
+            {
+              "_id": "MID517191668031042",
+              "description": "requestorEmail",
+              "list": [
+                ""
+              ],
+              "location": "query",
+              "logo": "/pages-gateway/assets/images/webhook.svg",
+              "maskParameter": false,
+              "name": "requestorEmail",
+              "ref": "aapilet-external-request",
+              "value": "requestorEmail"
+            },
+            {
+              "_id": "MID4860301471902362",
+              "ref": "text",
+              "value": ""
+            }
+          ]
+        },
+        "emailName": "email-1111549723",
+        "goto": "form-definition-1111420805",
+        "id": "email-definition-1111549723",
+        "isEmail": true,
+        "nodeType": "Email",
+        "schema": {},
+        "type": "email"
+      },
+      "form-definition-1111420805": {
+        "appname": "appname-1111420805",
+        "basePath": null,
+        "definition-id": "1111420805",
+        "description": "",
+        "form-map-template": {
+          "components": [
+            {
+              "attrs": [
+                {
+                  "attr": "",
+                  "value": ""
+                }
+              ],
+              "content": "A user creation deny email notification is send to the requester.",
+              "input": false,
+              "key": "html",
+              "label": "HTML",
+              "refreshOnChange": false,
+              "tableView": false,
+              "type": "htmlelement"
+            },
+            {
+              "disableOnInvalid": true,
+              "input": true,
+              "key": "submit",
+              "label": "Close",
+              "saveOnEnter": false,
+              "showValidations": false,
+              "tableView": false,
+              "type": "button"
+            }
+          ]
+        },
+        "form-map-values": {
+          "html": [],
+          "submit": []
+        },
+        "formheader": "Notification user deny",
+        "formid": "",
+        "formname": "form-1111420805",
+        "formuniqueid": "form-definition-1111420805",
+        "goto": "api-condition-stop-definition-1113829476",
+        "id": "form-definition-1111420805",
+        "isEditForm": true,
+        "isTemplate": false,
+        "ismyform": false,
+        "logo": "",
+        "nodeType": "Form",
+        "objData": {
+          "item": {
+            "data": {
+              "basePath": "/",
+              "consumes": [],
+              "host": "virtserver.swaggerhub.com",
+              "info": {
+                "description": "",
+                "title": "api-title-16381948",
+                "version": "1.0.0"
+              },
+              "paths": {
+                "/example": {
+                  "get": {
+                    "description": "This is an example opeartion to show how security is applied to the call.",
+                    "responses": {
+                      "200": {
+                        "description": "OK"
+                      }
+                    },
+                    "summary": "Server example operation"
+                  }
+                }
+              },
+              "produces": [],
+              "schemes": [
+                "https"
+              ],
+              "security": [],
+              "swagger": "2.0",
+              "x-applicationinfo": {
+                "x-API-Description": "API Description",
+                "x-API-Documentation-URL": "API Documentation URL",
+                "x-API-Name": "apiname",
+                "x-App-Description": "Description of Application",
+                "x-App-Logo": "Logo of Application",
+                "x-App-Name": "appname",
+                "x-App-URL": "Home page of application controlling this API",
+                "x-Category": "API Category",
+                "x-Company": "company",
+                "x-Company-Github": "Company Git URL",
+                "x-additionalHostNames": "Name of additional controlling this API"
+              }
+            }
+          }
+        },
+        "title": null,
+        "type": "form"
+      },
+      "api-condition-stop-definition-1113829476": {
+        "condition-id": "1113829476",
+        "condition-type": "Stop",
+        "customresponse": false,
+        "id": "api-condition-stop-definition-1113829476",
+        "killconnection": true,
+        "nodeType": "Stop",
+        "responseformat": {
+          "content-type": "application/json",
+          "response-body": [],
+          "response-config": {
+            "response-header": {},
+            "response-body": {}
+          },
+          "response-header": {}
+        },
+        "usecustomresponse": false
+      }
+    },
+    "enabled": false
+  }
+}

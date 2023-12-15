@@ -1,0 +1,5 @@
+name,note,folder,description,dummy
+CISCO-01-05-10,User: Admin Password:sdfser45,P_CISCO_Site1,CISCO C9500-40X-A,0
+CISCO-01-15-55,User: Admin Password:s0mething,P_CISCO_Site1,CISCO Firepower 115,0
+CISCO-02-01-01,User: Admin Password:Admin,P_CISCO_Site2,CISCO CSB220-48T4X,0
+SAP-01-AAC,User: Master Password:ThisIsTheP4ssw0rd,P_SAP_Site1,SAP interface,0
