@@ -1,2 +1,2 @@
-CyberArk Flows automation examples
+CyberArk Flows automation examples and tutorial materials
 # CyberArk
