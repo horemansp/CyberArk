@@ -42,6 +42,5 @@ loop POLLING
     AdvanceAuth3->>AdvanceAuth3: Check if OTP link is clicked
 end
 AdvanceAuth3-->>Flows:token & set-cookies
-AdvanceAuth3-->>Flows:token & set-cookies
 Flows-->>Identity Endpoints: with cookie = set-cookies
 ```
