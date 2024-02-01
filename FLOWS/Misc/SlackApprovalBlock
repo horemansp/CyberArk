@@ -1,0 +1,58 @@
+[
+  {
+    "type": "section",
+    "text": {
+      "type": "mrkdwn",
+      "text": "A new Service account ** has been requested by the Owner **, for the following application  **. The following Justifcation was provided: **."
+    }
+  },
+  {
+    "type": "section",
+    "text": {
+      "type": "mrkdwn",
+      "text": "*Provisioning Actions*"
+    }
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "section",
+    "text": {
+      "type": "mrkdwn",
+      "text": "*Approve the service account request*"
+    },
+    "accessory": {
+      "type": "button",
+      "text": {
+        "type": "plain_text",
+        "text": "Approve",
+        "emoji": true
+      },
+      "value": "click_me_1",
+      "url": "https://abs5790.stg.cybrflows.com/flows/Flow-20220930105548/connection?action=Approve&autoplay=true&id=",
+      "style": "danger"
+    }
+  },
+  {
+    "type": "section",
+    "text": {
+      "type": "mrkdwn",
+      "text": "*Deny the Service account request*"
+    },
+    "accessory": {
+      "type": "button",
+      "text": {
+        "type": "plain_text",
+        "text": "Deny",
+        "emoji": true
+      },
+      "value": "click_me_2",
+      "url": "https://abs5790.stg.cybrflows.com/flows/Flow-20220930105548/connection?action=Deny&autoplay=true&id=",
+      "style": "danger"
+    }
+  },
+  {
+    "type": "divider"
+  }
+]

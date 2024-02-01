@@ -1,0 +1,9 @@
+[
+  {
+    "type": "section",
+    "text": {
+      "type": "mrkdwn",
+      "text": "Approve to create a new account? <https://aaf4862.flows.cyberark.cloud/flows/Flow-20230214112855/play?username=John&action=create_user|Approve>"
+    }
+  }
+]
