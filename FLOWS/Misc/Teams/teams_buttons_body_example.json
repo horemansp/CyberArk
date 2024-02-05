@@ -1,0 +1,59 @@
+{
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "themeColor": "0076D7",
+    "summary": "Approval Request",
+    "sections": [
+      {
+        "activityTitle": "Approval Request",
+        "activitySubtitle": "Please review and take action",
+        "facts": [
+          {
+            "name": "Requester:",
+            "value": "HR system"
+          },
+          {
+            "name": "User",
+            "value": "John Doe"
+          },
+          {
+            "name": "Email",
+            "value": "jd@acme.corp"
+          },
+          {
+            "name": "Action",
+            "value": "Add user"
+          }
+        ],
+        "markdown": true
+      }
+    ],
+    "potentialAction": [
+      {
+        "@type": "OpenUri",
+        "name": "Deny",
+        "targets": [
+          {
+            "os": "default",
+            "uri": "https://aaf4862.flows.cyberark.cloud/api/v2/PH-Teams-Register-process/play",
+            "body": "{\"action\": \"deny\", \"comments\": \"{{comments.value}}\"}"
+          }
+        ]
+      },
+      {
+        "@type": "OpenUri",
+        "name": "Approve",
+        "targets": [
+          {
+            "os": "default",
+            "uri": "https://aaf4862.flows.cyberark.cloud/api/v2/PH-Teams-Register-process/play",
+            "body": "{\"action\": \"deny\", \"comments\": \"{{comments.value}}\"}"
+          }
+        ]
+      }
+   
+    ]
+
+  }
+  
+  
