@@ -35,8 +35,7 @@
         "targets": [
           {
             "os": "default",
-            "uri": "https://aaf4862.flows.cyberark.cloud/api/v2/PH-Teams-Register-process/play",
-            "body": "{\"action\": \"deny\", \"comments\": \"{{comments.value}}\"}"
+            "uri": "https://aaf4862.flows.cyberark.cloud/api/v2/PH-Teams-Register-process/play"
           }
         ]
       },
@@ -46,8 +45,7 @@
         "targets": [
           {
             "os": "default",
-            "uri": "https://aaf4862.flows.cyberark.cloud/api/v2/PH-Teams-Register-process/play",
-            "body": "{\"action\": \"deny\", \"comments\": \"{{comments.value}}\"}"
+            "uri": "https://aaf4862.flows.cyberark.cloud/api/v2/PH-Teams-Register-process/play"
           }
         ]
       }
