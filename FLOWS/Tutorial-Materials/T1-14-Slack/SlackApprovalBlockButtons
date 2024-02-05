@@ -1,0 +1,34 @@
+ [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Request to create a user, please take action"
+			}
+		},
+		{
+			"type": "actions",
+			"elements": [
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": "Approve",
+						"emoji": true
+					},
+					"value": "click_me_123",
+					"url": "https://aaf4862.flows.cyberark.cloud/flows/Flow-20230214112855/play?action=create&username=john&email=john@phconsul.com"
+				},
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": "Deny",
+						"emoji": true
+					},
+					"value": "click_me_123",
+					"url": "https://aaf4862.flows.cyberark.cloud/flows/Flow-20230214112855/play?action=deny"
+				}
+			]
+		}
+	]
