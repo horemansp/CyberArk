@@ -1,0 +1,3 @@
+- Form to enter new user details
+- Send message to slack with Deny and Approve button
+- Click button calls a flow to handle the results
