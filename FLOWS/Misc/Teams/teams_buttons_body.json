@@ -1,0 +1,174 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Container",
+                            "backgroundImage": {
+                                "url": "https://messagecardplayground.azurewebsites.net/assets/TxP_Background.png"
+                            },
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "horizontalAlignment": "Center",
+                                    "url": "https://cdn-icons-png.flaticon.com/512/732/732223.png",
+                                    "altText": "Blue Outlook logo",
+                                    "width": "35px",
+                                    "height": "35px",
+                                    "id": "acTerpIcon"
+                                }
+                            ],
+                            "bleed": true
+                        },
+                        {
+                            "type": "Container",
+                            "spacing": "None",
+                            "style": "emphasis",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "size": "ExtraLarge",
+                                    "weight": "Default",
+                                    "color": "Accent",
+                                    "text": "Interpreter request added to calendar",
+                                    "wrap": true,
+                                    "id": "acTerpTitle",
+                                    "fontType": "Default"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "spacing": "None",
+                                    "text": " ",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "spacing": "None",
+                                    "text": "Requested by: @{outputs('Get_user_profile_(V2)')?['body/displayName']}",
+                                    "wrap": true,
+                                    "fontType": "Default",
+                                    "size": "Default",
+                                    "weight": "Default",
+                                    "color": "Default",
+                                    "id": "acTerpRequestor",
+                                    "separator": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Phone: @{variables('BusinessPhone')}",
+                                    "wrap": true,
+                                    "id": "acTerpContact",
+                                    "fontType": "Default",
+                                    "size": "Default",
+                                    "weight": "Default",
+                                    "color": "Default"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Email: @{variables('UserEmail')}",
+                                    "wrap": true,
+                                    "id": "acTerpContact",
+                                    "fontType": "Default",
+                                    "size": "Default",
+                                    "weight": "Default",
+                                    "color": "Default"
+                                }
+                            ],
+                            "bleed": true,
+                            "height": "stretch"
+                        }
+                    ],
+                    "width": 50,
+                    "height": "stretch",
+                    "minHeight": "2px"
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://cdn-icons-png.flaticon.com/512/6788/6788510.png",
+                            "height": "55px",
+                            "horizontalAlignment": "Center",
+                            "size": "Stretch"
+                        },
+                        {
+                            "type": "Container",
+                            "height": "stretch",
+                            "items": [
+                                {
+                                    "type": "ColumnSet",
+                                    "columns": [
+                                        {
+                                            "type": "Column",
+                                            "width": 1,
+                                            "items": [
+                                                {
+                                                    "type": "FactSet",
+                                                    "facts": [
+                                                        {
+                                                            "title": "MRN",
+                                                            "value": "@{outputs('Get_response_details')?['body/r160b3714b7834eef94811ef10066abc4']}"
+                                                        },
+                                                        {
+                                                            "title": "Patient Name",
+                                                            "value": "@{outputs('Get_response_details')?['body/reac7b404bda044628a5f7d8126d8a967']}"
+                                                        },
+                                                        {    "title": "Language",
+                                                             "value": "@{outputs('Get_response_details')?['body/r49013c88a24746949e36cdef8ca347e6']}"
+                                                        },
+                                                        {
+                                                            "title": "DoB",
+                                                            "value": "@{outputs('DOB_Format')}"
+                                                        },
+                                                        {
+                                                            "title": "Location",
+                                                            "value": "@{variables('FinalFloor')}"
+                                                        },
+                                                        {
+                                                            "title": "Appt date:",
+                                                            "value": "@{formatDateTime(variables('startTime'), 'M/d/yy')}"
+                                                        },
+                                                        {
+                                                            "title": "Appt time:",
+                                                            "value": "@{formatDateTime(variables('startTime'), 'hh:mm tt')}"
+                                                        }
+                                                    ],
+                                                    "id": "acTerpKeys"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ActionSet",
+                                    "actions": [
+                                        {
+                                            "type": "Action.OpenUrl",
+                                            "id": "acTerpViewButton",
+                                            "title": "View Request on Calendar",
+                                            "url": "@{outputs('Create_event_on_OLS_Calendar')?['body/webLink']}"
+                                        }
+                                    ],
+                                    "id": "acTerpButton"
+                                }
+                            ]
+                        }
+                    ],
+                    "width": 50
+                }
+            ],
+            "height": "stretch"
+        }
+    ],
+    "msteams": {"width": "Full"},
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "fallbackText": "Interpreter request added to calendar. Requested by @{outputs('Get_user_profile_(V2)')?['body/displayName']} ; Email @{variables('UserEmail')}; Patient Name: @{outputs('Get_response_details')?['body/reac7b404bda044628a5f7d8126d8a967']}; MRN @{outputs('Get_response_details')?['body/r160b3714b7834eef94811ef10066abc4']}; DoB: @{outputs('DOB_Format')}; Location: @{variables('FinalFloor')}; Appt date: @{formatDateTime(variables('startTime'), 'M/d/yy')}; Appt time: @{formatDateTime(variables('startTime'), 'hh:mm tt')}; ",
+    "speak": "Interpreter request added to Language Services' master calendar."
+}
