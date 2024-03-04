@@ -20,6 +20,8 @@ Flows-->>StartAuth:first call (username)
 StartAuth-->>Flows:return sessionId and Mechanisms
 Flows-->>AdvanceAuth:with sessionId & mechId (ID for Psw)
 AdvanceAuth-->>Flows:ok
+Flows-->>AdvanceAuth1:with sessionId & mechId (ID for Email)
+AdvanceAuth-->>Flows:ok
 Flows-->>FORM: enter OTP
 FORM-->>Flows:return OTP
 Flows-->>AdvanceAuth2:with sessionId & mechId (ID for Email) & OTP
