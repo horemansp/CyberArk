@@ -18,12 +18,14 @@ Flows-->>Identity Endpoints: with cookie = set-cookies
 sequenceDiagram
 Flows-->>StartAuth:first call (username)
 StartAuth-->>Flows:return sessionId and Mechanisms
-Flows-->>AdvanceAuth:with sessionId & mechId (ID for Psw)
-AdvanceAuth-->>Flows:ok
+Flows-->>AdvanceAuth-u/p:with sessionId & mechId (ID for Psw)
+AdvanceAuth-u/p-->>Flows:ok
+Flows-->>AdvanceAuth-emailOTP:with sessionId & mechId (ID for Email)
+AdvanceAuth-emailOTP-->>Flows:ok
 Flows-->>FORM: enter OTP
 FORM-->>Flows:return OTP
-Flows-->>AdvanceAuth2:with sessionId & mechId (ID for Email) & OTP
-AdvanceAuth2-->>Flows:token & set-cookies
+Flows-->>AdvanceAuthOTP:with sessionId & mechId (ID for Email) & OTP
+AdvanceAuthOTP-->>Flows:token & set-cookies
 Flows-->>Identity Endpoints: with cookie = set-cookies
 ```
 
