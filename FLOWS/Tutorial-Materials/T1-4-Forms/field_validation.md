@@ -35,3 +35,6 @@ if(charOk(data.lastName)){ //asuming the field API property name is 'lastName'
   value = value.slice(0, -1)
 }
 ```
+
+> [!TIP]
+> The above examples are showcased in the PH-Form_input_validation.json flows file
