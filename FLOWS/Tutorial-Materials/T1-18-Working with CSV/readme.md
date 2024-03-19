@@ -1,6 +1,6 @@
 Import csv via API call
 
-PHO-CSV-API
+Flow name: PHO-CSV-API
 Postman:
 - send a body
 - Use the binary format
