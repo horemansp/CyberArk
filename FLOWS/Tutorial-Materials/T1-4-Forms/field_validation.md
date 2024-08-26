@@ -5,7 +5,7 @@ This will verify the input against the regex list. If there is an unwanted chara
 
 ```
 function validateInput(theInput) {
-       var regex = /^[a-zA-Z0-9 ]*$/;
+       var regex = /[a-zA-Z0-9 ]*/; //note: don't use the ^ and $ as you usually would do with regex, for example /^[a-zA-Z0-9 ]*$/
         return regex.test(theInput);
 }
 
