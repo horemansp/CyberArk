@@ -39,6 +39,6 @@ if(charOk(data.lastName)){ //asuming the field API property name is 'lastName'
 > [!TIP]
 > The above examples are showcased in the PH-Form_input_validation.json flows file
 
-###Make fields available based on selection
+### Make fields available based on selection
 In the example Form-field-selector-valdiation.json flow you will see an example that shows certain fields based upon a dropdown selection.<br>
 It will also verify the number format they have to enter with custom attributes to change the color.
