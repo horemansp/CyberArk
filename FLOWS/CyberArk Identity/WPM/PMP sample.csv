@@ -1,0 +1,3 @@
+Resource Name,DNS Name,Description,Department,Location,OS Type,Resource URL,User Account,Password,Notes,Environment,System name
+SCSM IT Prod,,SCSM IT,N/A,N/A,Windows,,Administrator,test1pwd,Derdack Administrator account Testlab,Test,Derdack Testlab
+Insight,,,ITS Business Applications,Amstelveen,Windows,test2pwd,nl-fminsightcenter,Welkom03_!123@,Email: nl-fminsightcenter@kpmg.nl,,
