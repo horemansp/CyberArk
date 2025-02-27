@@ -2,7 +2,7 @@
 ## SCA on demand request approval with teams webhook
 Instructions
 - Import both flows ```SCA Ondemand-Teams```and ```SCA Ondemand-Teams-Approval-Process```
-- Change the custom values for the ```SCA Ondemand-Teams`` flow
+- Change the custom values for the ```SCA Ondemand-Teams``` flow
   - Update the value for your ```tenantId``` prefix. For example if your tenant prefix is "acme" then then full path to the api's will be https://acme-sca.cyberark.cloud.
     - Update the value for the custom value ```tenantId``` to "acme"
   - Update the value for ```teamsWebHook``` to your teams webhook
