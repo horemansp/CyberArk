@@ -1,0 +1,1 @@
+{"Script":"select loginname,email,sourcedslocalized,id,usertype,lastlogin,lastlastlogin from user where lastlogin < (DateFunc('now', '-90')) AND UserType = 'User' AND loginname NOT IN ('user1','user2','user3')"}
